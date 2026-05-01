@@ -36,6 +36,7 @@ namespace System.Net.Quic.Tests
 
         [Fact]
         [PlatformSpecific(TestPlatforms.Linux)]
+        [ActiveIssue("https://github.com/dotnet/runtime/issues/127658", typeof(PlatformDetection), nameof(PlatformDetection.IsAzureLinux4OrHigher))]
         public async Task SupportedLinuxPlatformsWithMsQuic_IsSupportedIsTrue()
         {
             using Process find = new Process();
